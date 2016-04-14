@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "StarsController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)starsAction:(id)sender {
+    StarsController *controller = [StarsController new];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end
