@@ -29,7 +29,7 @@
 
     label.text = [NSString stringWithFormat:@"%.2f",8.0f];
     [_scroeView setScroe:8];
-    [_scroeView setIsDecimal:NO];
+    [_scroeView setIsDecimal:YES];
     [_scroeView setIsCanScroe:YES];
     [_scroeView setScroeBlock:^(CGFloat scroe) {
         NSLog(@"%.2f",scroe);
