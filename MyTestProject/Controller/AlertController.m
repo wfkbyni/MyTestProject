@@ -21,11 +21,32 @@
 
     [self.view setBackgroundColor:[UIColor whiteColor]];
 
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[WXAlertController sharedAlertController] alertControllerWithTitle:@"标题" withMessage:@"message内容" withCancel:@"取消" withItems:@[@"确定"] withShowObj:self withAlertControllerStyle:UIAlertControllerStyleAlert withClickedButtonWithType:^(NSInteger index, UIAlertControllerStyle style) {
-            NSLog(@"style:%@  index:%@",@(style),@(index));
-        }];
-    });
+    UIButton *alertBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [alertBtn setFrame:CGRectMake(40, 80, CGRectGetWidth(self.view.frame) - 80, 40)];
+    [alertBtn setTitle:@"AlertView" forState:UIControlStateNormal];
+    [alertBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.view addSubview:alertBtn];
+
+    UIButton *actionSheetBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [actionSheetBtn setFrame:CGRectMake(40, CGRectGetMaxY(alertBtn.frame) + 40, CGRectGetWidth(self.view.frame) - 80, 40)];
+    [actionSheetBtn setTitle:@"ActionSheet" forState:UIControlStateNormal];
+    [actionSheetBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+    [self.view addSubview:actionSheetBtn];
+
+    [alertBtn addTarget:self action:@selector(alertViewAction:) forControlEvents:UIControlEventTouchUpInside];
+    [actionSheetBtn addTarget:self action:@selector(actionSheetAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)alertViewAction:(UIButton *)sender{
+    [[WXAlertController sharedAlertController] alertControllerWithTitle:@"标题" withMessage:@"message内容" withCancel:@"取消" withItems:@[@"确定"] withShowObj:self withAlertControllerStyle:UIAlertControllerStyleAlert withClickedButtonWithType:^(NSInteger index, UIAlertControllerStyle style) {
+        NSLog(@"style:%@  index:%@",@(style),@(index));
+    }];
+}
+
+- (void)actionSheetAction:(UIButton *)sender{
+    [[WXAlertController sharedAlertController] alertControllerWithTitle:@"标题" withMessage:@"message内容" withCancel:@"取消" withItems:@[@"选项1",@"选项2",@"选项3",@"选项4",@"选项5"] withShowObj:self withAlertControllerStyle:UIAlertControllerStyleActionSheet withClickedButtonWithType:^(NSInteger index, UIAlertControllerStyle style) {
+        NSLog(@"style:%@  index:%@",@(style),@(index));
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
