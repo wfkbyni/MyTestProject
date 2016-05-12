@@ -16,6 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //NSString *value = @"\\upload";
+    //NSLog(@"%@",value);
     // Override point for customization after application launch.
     return YES;
 }

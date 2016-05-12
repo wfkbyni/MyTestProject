@@ -35,8 +35,10 @@
         NSLog(@"%.2f",scroe);
         label.text = [NSString stringWithFormat:@"%.2f",scroe];
     }];
+}
 
-
+- (void)myLog:(id)sender{
+    NSLog(@"%@",sender);
 }
 
 @end
