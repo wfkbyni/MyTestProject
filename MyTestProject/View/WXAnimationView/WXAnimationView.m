@@ -97,12 +97,10 @@
     [self addSubview:bgView];
 
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, self.frame.size.width, 40)];
-
     // 设置填充颜色
     UIColor *fillColor = [UIColor redColor];
     [fillColor set];
     [path fill];
-
     // 根据我们设置的各个点连线
     [path stroke];
 
@@ -118,8 +116,6 @@
     [path fill];
     
     [path stroke];
-
-
 
     UIImage *image = [UIImage imageNamed:@"bg-1"];
     _iconImageView = [[UIImageView alloc] initWithImage:image];
@@ -141,7 +137,6 @@
     [self addSubview:label];
 
     [self startAnimation];
-
 }
 
 - (void)startAnimation{

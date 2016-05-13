@@ -12,7 +12,6 @@
     float selectValue;
 
     UIImageView *bgImageView;
-
 }
 
 @end
