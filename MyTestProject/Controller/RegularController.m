@@ -26,8 +26,9 @@
     [_content setPlaceholder:@"请输入验证内容"];
     [self.view addSubview:_content];
 
+    CGFloat y = CGRectGetMaxY(_content.frame);
     UIButton *valiBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [valiBtn setFrame:CGRectMake(20, CGRectGetMaxY(_content.frame), CGRectGetWidth(_content.frame), 50)];
+    [valiBtn setFrame:CGRectMake(20, y, CGRectGetWidth(_content.frame), 50)];
     [valiBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0f]];
     [valiBtn.titleLabel setNumberOfLines:2];
     [valiBtn setBackgroundColor:[UIColor orangeColor]];
@@ -35,25 +36,43 @@
     [valiBtn addTarget:self action:@selector(valiPwdAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:valiBtn];
 
+    y = CGRectGetMaxY(valiBtn.frame) + 10;
+    valiBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [valiBtn setFrame:CGRectMake(20, y, CGRectGetWidth(_content.frame), 50)];
+    [valiBtn.titleLabel setFont:[UIFont systemFontOfSize:12.0f]];
+    [valiBtn.titleLabel setNumberOfLines:2];
+    [valiBtn setBackgroundColor:[UIColor orangeColor]];
+    [valiBtn setTitle:@"校验金额 (金额校验，精确到2位小数)" forState:UIControlStateNormal];
+    [valiBtn addTarget:self action:@selector(valiMoneyAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:valiBtn];
+
 }
 
-- (BOOL)isPassRegular:(NSString *)regular{
+- (void)isPassRegular:(NSString *)regular{
 
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regular];
 
     BOOL result = [predicate evaluateWithObject:_content.text];
-    return result;
+
+    if (result) {
+        [self.view makeToast:[NSString stringWithFormat:@"%@ 验证成功",_content.text] duration:2 position:CSToastPositionCenter];
+    }else{
+        [self.view makeToast:[NSString stringWithFormat:@"%@ 验证失败",_content.text] duration:2 position:CSToastPositionCenter];
+    }
 }
 
 - (void)valiPwdAction:(UIButton *)sender{
 
     NSString *regular = @"^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$";
-    if ([self isPassRegular:regular]) {
-        [self.view makeToast:[NSString stringWithFormat:@"%@ 验证成功",_content.text] duration:2 position:CSToastPositionCenter];
-    }else{
-        [self.view makeToast:[NSString stringWithFormat:@"%@ 验证失败",_content.text] duration:2 position:CSToastPositionCenter];
-    }
 
+    [self isPassRegular:regular];
+}
+
+- (void)valiMoneyAction:(UIButton *)sender{
+
+    NSString *regular = @"^[0-9]+(.[0-9]{2})?$";
+
+    [self isPassRegular:regular];
 }
 
 @end
