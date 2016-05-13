@@ -5,5 +5,6 @@
 
 target 'MyTestProject' do
 pod 'ReactiveCocoa'
+pod 'Toast'
 end
 

@@ -10,6 +10,7 @@
 #import "StarsController.h"
 #import "AnimatioController.h"
 #import "AlertController.h"
+#import "RegularController.h"
 
 @interface ViewController ()
 
@@ -47,6 +48,11 @@
 
 - (IBAction)alertControllerAction:(id)sender {
     AlertController *controller = [[AlertController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)regularAction:(id)sender {
+    RegularController *controller = [[RegularController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end
