@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  MyTestProject
+//
+//  Created by 舒永超 on 16/5/18.
+//  Copyright © 2016年 舒永超. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+SDAutoLayout.h"
+#import "UITableView+SDAutoTableViewCellHeight.h"
+
+#endif /* PrefixHeader_pch */

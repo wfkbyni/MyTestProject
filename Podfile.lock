@@ -6,14 +6,17 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SDAutoLayout (1.53)
   - Toast (3.0)
 
 DEPENDENCIES:
   - ReactiveCocoa
+  - SDAutoLayout
   - Toast
 
 SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
 COCOAPODS: 0.39.0

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SDAutoLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toast.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2677BA4CAF84D0B81A928FE80041C1C5</key>
+		<key>200687D1194CEFC297AE02252AD1CF8D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFDB86AD52BF3965FB82969CA1A9C345</key>
+		<key>4303105C50D22FF3ECD43EDF79582DA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EC62E623B3C063D7C62BA67F66BAA55C</key>
+		<key>AA76BF504E65A54CA919DABBE532F47E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C78B23288BD537FBD8F2BD69BF481A51</key>
 		<dict>
 			<key>primary</key>
 			<true/>

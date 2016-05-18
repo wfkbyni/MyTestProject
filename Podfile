@@ -6,5 +6,6 @@
 target 'MyTestProject' do
 pod 'ReactiveCocoa'
 pod 'Toast'
+pod 'SDAutoLayout'
 end
 

@@ -11,6 +11,7 @@
 #import "AnimatioController.h"
 #import "AlertController.h"
 #import "RegularController.h"
+#import "AutoLayoutController.h"
 
 @interface ViewController ()
 
@@ -29,11 +30,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
--(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
-}
-
 
 
 - (IBAction)starsAction:(id)sender {
@@ -55,4 +51,11 @@
     RegularController *controller = [[RegularController alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (IBAction)autolayoutAction:(id)sender {
+    AutoLayoutController *controller = [[AutoLayoutController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+
 @end
