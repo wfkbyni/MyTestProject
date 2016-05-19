@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, AutoLayoutType) {
-    AutoLayoutTypeWithAutoHeight,            // 动态计算高度
-    AutoLayoutTypeWithGrid                   // 格子布局
+    AutoLayoutTypeWithAutoHeight,             // 动态计算高度
+    AutoLayoutTypeWithGrid,                   // 格子布局
+    AutoLayoutTypeWithCellType                // 多种cell类型
 };
 
 @interface AutoLayoutController : UIViewController

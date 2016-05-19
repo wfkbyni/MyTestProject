@@ -11,6 +11,13 @@
 		FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */; };
 		FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533831CEBFD7A001B9E01 /* AutoHeightViewController.m */; };
 		FA3533871CEC35F4001B9E01 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533861CEC35F4001B9E01 /* GridViewController.m */; };
+		FA35338A1CEC4FDE001B9E01 /* TypeCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533891CEC4FDE001B9E01 /* TypeCellViewController.m */; };
+		FA35338D1CEC5249001B9E01 /* WXBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35338C1CEC5249001B9E01 /* WXBaseTableViewCell.m */; };
+		FA3533901CEC54B1001B9E01 /* WXPlaintextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35338F1CEC54B1001B9E01 /* WXPlaintextTableViewCell.m */; };
+		FA3533931CEC56B3001B9E01 /* WXMessagePicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533921CEC56B3001B9E01 /* WXMessagePicTableViewCell.m */; };
+		FA3533961CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533951CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m */; };
+		FA3533991CEC58FB001B9E01 /* WXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533981CEC58FB001B9E01 /* WXMessage.m */; };
+		FA35339D1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35339C1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m */; };
 		FA5A0C7F1CCDC08000FCDAA3 /* AnimatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A0C7E1CCDC08000FCDAA3 /* AnimatioController.m */; };
 		FA5A0C831CCDE92D00FCDAA3 /* WXAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A0C821CCDE92D00FCDAA3 /* WXAnimationView.m */; };
 		FAE9554B1CE337D00073F93C /* WXAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9554A1CE337D00073F93C /* WXAlertController.m */; };
@@ -43,6 +50,20 @@
 		FA3533831CEBFD7A001B9E01 /* AutoHeightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoHeightViewController.m; sourceTree = "<group>"; };
 		FA3533851CEC35F4001B9E01 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
 		FA3533861CEC35F4001B9E01 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		FA3533881CEC4FDE001B9E01 /* TypeCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeCellViewController.h; sourceTree = "<group>"; };
+		FA3533891CEC4FDE001B9E01 /* TypeCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCellViewController.m; sourceTree = "<group>"; };
+		FA35338B1CEC5249001B9E01 /* WXBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXBaseTableViewCell.h; sourceTree = "<group>"; };
+		FA35338C1CEC5249001B9E01 /* WXBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXBaseTableViewCell.m; sourceTree = "<group>"; };
+		FA35338E1CEC54B1001B9E01 /* WXPlaintextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPlaintextTableViewCell.h; sourceTree = "<group>"; };
+		FA35338F1CEC54B1001B9E01 /* WXPlaintextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPlaintextTableViewCell.m; sourceTree = "<group>"; };
+		FA3533911CEC56B3001B9E01 /* WXMessagePicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMessagePicTableViewCell.h; sourceTree = "<group>"; };
+		FA3533921CEC56B3001B9E01 /* WXMessagePicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMessagePicTableViewCell.m; sourceTree = "<group>"; };
+		FA3533941CEC57C3001B9E01 /* WXActivityLinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXActivityLinkTableViewCell.h; sourceTree = "<group>"; };
+		FA3533951CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXActivityLinkTableViewCell.m; sourceTree = "<group>"; };
+		FA3533971CEC58FB001B9E01 /* WXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXMessage.h; sourceTree = "<group>"; };
+		FA3533981CEC58FB001B9E01 /* WXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXMessage.m; sourceTree = "<group>"; };
+		FA35339B1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXPlaintextLinkTableViewCell.h; sourceTree = "<group>"; };
+		FA35339C1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXPlaintextLinkTableViewCell.m; sourceTree = "<group>"; };
 		FA5A0C7D1CCDC08000FCDAA3 /* AnimatioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatioController.h; sourceTree = "<group>"; };
 		FA5A0C7E1CCDC08000FCDAA3 /* AnimatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatioController.m; sourceTree = "<group>"; };
 		FA5A0C811CCDE92D00FCDAA3 /* WXAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAnimationView.h; sourceTree = "<group>"; };
@@ -117,12 +138,34 @@
 		FA3533811CEBFD5E001B9E01 /* LayoutController */ = {
 			isa = PBXGroup;
 			children = (
+				FA3533971CEC58FB001B9E01 /* WXMessage.h */,
+				FA3533981CEC58FB001B9E01 /* WXMessage.m */,
 				FA3533821CEBFD7A001B9E01 /* AutoHeightViewController.h */,
 				FA3533831CEBFD7A001B9E01 /* AutoHeightViewController.m */,
 				FA3533851CEC35F4001B9E01 /* GridViewController.h */,
 				FA3533861CEC35F4001B9E01 /* GridViewController.m */,
+				FA3533881CEC4FDE001B9E01 /* TypeCellViewController.h */,
+				FA3533891CEC4FDE001B9E01 /* TypeCellViewController.m */,
+				FA35339A1CEC6F99001B9E01 /* TypeCell */,
 			);
 			name = LayoutController;
+			sourceTree = "<group>";
+		};
+		FA35339A1CEC6F99001B9E01 /* TypeCell */ = {
+			isa = PBXGroup;
+			children = (
+				FA35338B1CEC5249001B9E01 /* WXBaseTableViewCell.h */,
+				FA35338C1CEC5249001B9E01 /* WXBaseTableViewCell.m */,
+				FA35338E1CEC54B1001B9E01 /* WXPlaintextTableViewCell.h */,
+				FA35338F1CEC54B1001B9E01 /* WXPlaintextTableViewCell.m */,
+				FA3533911CEC56B3001B9E01 /* WXMessagePicTableViewCell.h */,
+				FA3533921CEC56B3001B9E01 /* WXMessagePicTableViewCell.m */,
+				FA3533941CEC57C3001B9E01 /* WXActivityLinkTableViewCell.h */,
+				FA3533951CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m */,
+				FA35339B1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.h */,
+				FA35339C1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m */,
+			);
+			name = TypeCell;
 			sourceTree = "<group>";
 		};
 		FA5A0C801CCDE91C00FCDAA3 /* WXAnimationView */ = {
@@ -364,19 +407,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3533991CEC58FB001B9E01 /* WXMessage.m in Sources */,
+				FA3533901CEC54B1001B9E01 /* WXPlaintextTableViewCell.m in Sources */,
 				FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */,
 				FAF70ED21CBF80980079B29F /* WXCustomScroeView.m in Sources */,
+				FA3533931CEC56B3001B9E01 /* WXMessagePicTableViewCell.m in Sources */,
 				FAE9554B1CE337D00073F93C /* WXAlertController.m in Sources */,
+				FA35339D1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m in Sources */,
 				FAF70E9D1CBF794D0079B29F /* ViewController.m in Sources */,
+				FA35338A1CEC4FDE001B9E01 /* TypeCellViewController.m in Sources */,
 				FAF70E9A1CBF794D0079B29F /* AppDelegate.m in Sources */,
 				FAE955561CE5AFE10073F93C /* RegularController.m in Sources */,
 				FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */,
+				FA35338D1CEC5249001B9E01 /* WXBaseTableViewCell.m in Sources */,
 				FA3533871CEC35F4001B9E01 /* GridViewController.m in Sources */,
 				FA5A0C7F1CCDC08000FCDAA3 /* AnimatioController.m in Sources */,
 				FA5A0C831CCDE92D00FCDAA3 /* WXAnimationView.m in Sources */,
 				FAE9554F1CE337F10073F93C /* AlertController.m in Sources */,
 				FAF70E971CBF794D0079B29F /* main.m in Sources */,
 				FAF70EC01CBF7AA60079B29F /* StarsController.m in Sources */,
+				FA3533961CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

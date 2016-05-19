@@ -9,6 +9,7 @@
 #import "AutoLayoutController.h"
 #import "AutoHeightViewController.h"
 #import "GridViewController.h"
+#import "TypeCellViewController.h"
 
 @interface AutoLayoutController ()
 
@@ -49,7 +50,7 @@
     [bgView setBackgroundColor:[UIColor colorWithRed:0.000 green:0.000 blue:1.000 alpha:0.404]];
     [self.view addSubview:bgView];
 
-    UIButton *btn1 = [self commonBtnWithTitle:@"待定" withAutoLayoutType:-1];
+    UIButton *btn1 = [self commonBtnWithTitle:@"多种cell布局" withAutoLayoutType:AutoLayoutTypeWithCellType];
     UIButton *btn2 = [self commonBtnWithTitle:@"待定" withAutoLayoutType:-1];
 
     btn1.sd_layout.heightIs(50);
@@ -89,6 +90,12 @@
         case AutoLayoutTypeWithGrid:
         {
             GridViewController *controller = [GridViewController new];
+            [self.navigationController pushViewController:controller animated:YES];
+        }
+            break;
+        case AutoLayoutTypeWithCellType:
+        {
+            TypeCellViewController *controller = [TypeCellViewController new];
             [self.navigationController pushViewController:controller animated:YES];
         }
             break;
