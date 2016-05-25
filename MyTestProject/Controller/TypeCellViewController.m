@@ -11,7 +11,7 @@
 #import "WXMessage.h"
 #import "SDImageCache.h"
 
-@interface TypeCellViewController () <UITableViewDelegate,UITableViewDataSource>
+@interface TypeCellViewController () <UITableViewDelegate,UITableViewDataSource,WXBaseTableViewCellDelegate>
 
 @property (nonatomic, strong) UITableView *myTableView;
 
@@ -73,7 +73,6 @@
                 break;
             case 1:
                 message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKDTj_ascxCsAhj6ATIID0eX9L4BOCE";
-                message.activityUrl = message.imageUrl;
                 break;
             case 2:
                 message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCzpIG-aBCsAhjYBDIIQ1_nz0UeZoI";
@@ -139,6 +138,9 @@
         cell = [[mClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    
+    cell.indexPath = indexPath;
+    cell.theDelegate = self;
     cell.message = message;
 
     ////// 此步设置用于实现cell的frame缓存，可以让tableview滑动更加流畅 //////
@@ -160,6 +162,14 @@
         width = [UIScreen mainScreen].bounds.size.height;
     }
     return width;
+}
+
+- (void)reloadLoadWithIndexPath:(NSIndexPath *)indexPath withSize:(CGSize)size{
+    WXMessage *message = self.messageArray[indexPath.row];
+    message.size = size;
+    
+    NSLog(@"%ld  ---   row:%ld",indexPath.section,indexPath.row);
+    [self.myTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
 
 @end

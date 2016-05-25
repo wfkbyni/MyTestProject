@@ -39,5 +39,6 @@ typedef NS_ENUM(NSUInteger, WXMessageType) {
 @property (nonatomic, assign) NSInteger commentId;          /**< 吧一吧ID */
 @property (nonatomic, assign) NSInteger replyId;            /**< 回复吧一吧ID */
 @property (nonatomic, assign) BOOL      hasRead;            /**< 消息状态,0-未读,1-已读 */
+@property (nonatomic, assign) CGSize size;
 
 @end

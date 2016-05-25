@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "WXMessage.h"
 
+@protocol WXBaseTableViewCellDelegate <NSObject>
+
+- (void)reloadLoadWithIndexPath:(NSIndexPath *)indexPath withSize:(CGSize)size;
+
+@end
+
 @interface WXBaseTableViewCell : UITableViewCell
 
 + (NSString *)cellIdentifierForRow:(WXMessage *)message;
@@ -23,5 +29,8 @@
 @property (nonatomic, strong) UIImageView *arrow;
 
 @property (nonatomic, strong) WXMessage *message;
+
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, assign) id<WXBaseTableViewCellDelegate> theDelegate;
 
 @end
