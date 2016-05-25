@@ -9,6 +9,12 @@
 #import "WXPlaintextLinkTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
+@interface WXPlaintextLinkTableViewCell ()
+
+@property (nonatomic, strong) WXMessage *wxMessage;
+
+@end
+
 @implementation WXPlaintextLinkTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -20,17 +26,6 @@
 }
 
 - (void)setup{
-
-    self.title.sd_layout
-    .leftSpaceToView(self.bgView, 10)
-    .rightSpaceToView(self.bgView, 10)
-    .topSpaceToView(self.bgView, 10);
-
-    self.time.sd_layout
-    .leftEqualToView(self.title)
-    .rightEqualToView(self.title)
-    .topSpaceToView(self.title, 5)
-    .heightIs(21);
 
     self.content.sd_layout
     .leftEqualToView(self.title)
@@ -50,11 +45,12 @@
     .topSpaceToView(self.line, 10)
     .heightIs(30);
 
+
     self.arrow.sd_layout
     .rightEqualToView(self.title)
-    .topSpaceToView(self.line, 10)
-    .widthIs(30)
-    .heightIs(30);
+    .topSpaceToView(self.line, 10 + 8)
+    .widthIs(8)
+    .heightIs(15);
 
     self.bgView.sd_layout
     .leftSpaceToView(self.contentView, 10)
@@ -67,17 +63,20 @@
 }
 
 - (void)setMessage:(WXMessage *)message{
+
+    _wxMessage = message;
+
     self.title.text = message.msgTitle;
 
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:message.submitTime];
-    NSString *time = [df stringFromDate:date];
-
-    self.time.text = time;
+    self.time.text = [NSDate stringWithIntervalSince1970:message.submitTime];;
 
     self.content.text = message.msgContentShort;
+
+    [self.activityDetail addTarget:self action:@selector(activityDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)activityDetailAction:(id)sender{
+
 }
 
 @end

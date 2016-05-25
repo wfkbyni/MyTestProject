@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		452ADF8003E4BA2977946B14 /* libPods-MyTestProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6224150600261F6E2355D0F6 /* libPods-MyTestProject.a */; };
+		FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */; };
+		FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */; };
 		FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */; };
 		FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533831CEBFD7A001B9E01 /* AutoHeightViewController.m */; };
 		FA3533871CEC35F4001B9E01 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3533861CEC35F4001B9E01 /* GridViewController.m */; };
@@ -43,6 +45,10 @@
 		5D612DDB4C756E9815B5F9B3 /* Pods-MyTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.debug.xcconfig"; sourceTree = "<group>"; };
 		6224150600261F6E2355D0F6 /* libPods-MyTestProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MyTestProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5B0B6934907ECBF10E16805 /* Pods-MyTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTestProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTestProject/Pods-MyTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		FA06A6B31CF5B4F0009FDBEA /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
+		FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		FA06A6B61CF5B561009FDBEA /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
+		FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Helper.m"; sourceTree = "<group>"; };
 		FA35337C1CEBFABA001B9E01 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FA35337E1CEBFC93001B9E01 /* AutoLayoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoLayoutController.h; sourceTree = "<group>"; };
 		FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoLayoutController.m; sourceTree = "<group>"; };
@@ -123,6 +129,17 @@
 				E5B0B6934907ECBF10E16805 /* Pods-MyTestProject.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FA06A6B21CF5B4D7009FDBEA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				FA06A6B31CF5B4F0009FDBEA /* NSDate+Helper.h */,
+				FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */,
+				FA06A6B61CF5B561009FDBEA /* UIImage+Helper.h */,
+				FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 		FA35337D1CEBFC79001B9E01 /* AutoLayoutController */ = {
@@ -207,6 +224,7 @@
 		FAF70E941CBF794D0079B29F /* MyTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				FA06A6B21CF5B4D7009FDBEA /* Other */,
 				FAF70EC11CBF80980079B29F /* View */,
 				FAF70EBD1CBF7A7F0079B29F /* Controller */,
 				FAF70E981CBF794D0079B29F /* AppDelegate.h */,
@@ -419,10 +437,12 @@
 				FAF70E9A1CBF794D0079B29F /* AppDelegate.m in Sources */,
 				FAE955561CE5AFE10073F93C /* RegularController.m in Sources */,
 				FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */,
+				FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */,
 				FA35338D1CEC5249001B9E01 /* WXBaseTableViewCell.m in Sources */,
 				FA3533871CEC35F4001B9E01 /* GridViewController.m in Sources */,
 				FA5A0C7F1CCDC08000FCDAA3 /* AnimatioController.m in Sources */,
 				FA5A0C831CCDE92D00FCDAA3 /* WXAnimationView.m in Sources */,
+				FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */,
 				FAE9554F1CE337F10073F93C /* AlertController.m in Sources */,
 				FAF70E971CBF794D0079B29F /* main.m in Sources */,
 				FAF70EC01CBF7AA60079B29F /* StarsController.m in Sources */,

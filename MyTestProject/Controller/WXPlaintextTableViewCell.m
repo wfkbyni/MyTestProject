@@ -20,18 +20,6 @@
 
 - (void)setup{
 
-    self.title.sd_layout
-    .leftSpaceToView(self.bgView, 10)
-    .rightSpaceToView(self.bgView, 10)
-    .topSpaceToView(self.bgView, 10)
-    .heightIs(21);
-
-    self.time.sd_layout
-    .leftEqualToView(self.title)
-    .rightEqualToView(self.title)
-    .topSpaceToView(self.title, 5)
-    .heightIs(21);
-
     self.content.sd_layout
     .leftEqualToView(self.title)
     .rightEqualToView(self.title)
@@ -51,13 +39,7 @@
 - (void)setMessage:(WXMessage *)message{
     self.title.text = message.msgTitle;
 
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:message.submitTime];
-    NSString *time = [df stringFromDate:date];
-
-    self.time.text = time;
+    self.time.text = [NSDate stringWithIntervalSince1970:message.submitTime];;
 
     self.content.text = message.msgContentShort;
 }

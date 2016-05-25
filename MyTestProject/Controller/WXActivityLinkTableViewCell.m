@@ -9,6 +9,12 @@
 #import "WXActivityLinkTableViewCell.h"
 #import "UIImageView+WebCache.h"
 
+@interface WXActivityLinkTableViewCell ()
+
+@property (nonatomic, strong) WXMessage *wxMessage;
+
+@end
+
 @implementation WXActivityLinkTableViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -21,21 +27,9 @@
 
 - (void)setup{
 
-    self.title.sd_layout
-    .leftSpaceToView(self.bgView, 10)
-    .rightSpaceToView(self.bgView, 10)
-    .topSpaceToView(self.bgView, 10);
-
-    self.time.sd_layout
-    .leftEqualToView(self.title)
-    .rightEqualToView(self.title)
-    .topSpaceToView(self.title, 5)
-    .heightIs(21);
-
     self.activityImageView.sd_layout
     .topSpaceToView(self.time, 10)
-    .leftSpaceToView(self.bgView, 10)
-    .rightSpaceToView(self.bgView, 10);
+    .centerXEqualToView(self.bgView);
 
     self.content.sd_layout
     .leftEqualToView(self.title)
@@ -57,9 +51,9 @@
 
     self.arrow.sd_layout
     .rightEqualToView(self.title)
-    .topSpaceToView(self.line, 10)
-    .widthIs(30)
-    .heightIs(30);
+    .topSpaceToView(self.line, 10 + 8)
+    .widthIs(8)
+    .heightIs(15);
 
     self.bgView.sd_layout
     .leftSpaceToView(self.contentView, 10)
@@ -72,26 +66,35 @@
 }
 
 - (void)setMessage:(WXMessage *)message{
+    _wxMessage = message;
     self.title.text = message.msgTitle;
 
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-
-    NSDate *date = [[NSDate alloc] initWithTimeIntervalSince1970:message.submitTime];
-    NSString *time = [df stringFromDate:date];
-
-    self.time.text = time;
+    self.time.text = [NSDate stringWithIntervalSince1970:message.submitTime];
 
     self.content.text = message.msgContentShort;
 
-    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:message.imageUrl] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        [self.activityImageView setContentMode:UIViewContentModeScaleAspectFit];
-        self.activityImageView.image = image;
-        CGFloat scale = 0.5;//image.size.height / image.size.width;
-        self.activityImageView.sd_layout.autoHeightRatio(scale);
+    NSString *url = message.imageUrl;
+    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:url]];
 
-        [self.bgView setupAutoHeightWithBottomView:self.activityDetail bottomMargin:10];
-    }];
+    CGFloat width = self.activityImageView.image.size.width;
+
+    if (width > 0) {
+        self.activityImageView.sd_layout
+        .autoHeightRatio(self.activityImageView.image.size.height / width)
+        .widthIs(width);
+    }else{
+        //未缓存,根据图片url获取图片尺寸
+        CGSize size = [UIImage getImageSizeWithURL:[NSURL URLWithString:message.imageUrl]];
+        CGFloat scale = size.height / size.width;
+        self.activityImageView.sd_layout
+        .autoHeightRatio(scale)
+        .widthIs(size.width);
+    }
+
+    [self.activityDetail addTarget:self action:@selector(activityDetailAction:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)activityDetailAction:(id)sender{
 }
 
 @end

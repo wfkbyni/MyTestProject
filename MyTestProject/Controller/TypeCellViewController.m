@@ -38,7 +38,7 @@
 - (void)commonData{
     _messageArray = [NSMutableArray array];
 
-    NSInteger count = arc4random_uniform(40);
+    NSInteger count = 3;//arc4random_uniform(40);
 
     for (NSInteger i = 0; i < count; i++) {
         WXMessage *message = [WXMessage new];
@@ -49,24 +49,24 @@
 
         switch (i) {
             case 0:
-                message.imageUrl = @"http://pic.fotomore.com/mid/130173000/isc130173832.jpg";
+                message.imageUrl = @"http://cdn.cocimg.com/bbs/attachment/Fid_18/18_298683_9dbfa2ec2abd43d.png";
                 break;
             case 1:
-                message.imageUrl = @"http://pic.fotomore.com/thumb/129378000/isc129378345.jpg";
+                message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKDTj_ascxCsAhj6ATIID0eX9L4BOCE";
                 message.activityUrl = message.imageUrl;
                 break;
             case 2:
-                message.imageUrl = @"http://pic.fotomore.com/thumb/128767000/isc128767649.jpg";
+                message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCzpIG-aBCsAhjYBDIIQ1_nz0UeZoI";
                 break;
             case 3:
                 message.imageUrl = @"http://pic.fotomore.com/thumb/129348000/isc129348197.jpg";
                 message.activityUrl = message.imageUrl;
                 break;
             case 4:
-                message.imageUrl = @"http://pic.fotomore.com/thumb/129383000/isc129383974.jpg";
+                message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKDTj_ascxCsAhj6ATIID0eX9L4BOCE";
                 break;
             case 5:
-                message.imageUrl = @"http://pic.fotomore.com/thumb/129379000/isc129379988.jpg";
+                message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCzpIG-aBCsAhjYBDIIQ1_nz0UeZoI";
                 break;
             case 6:
                 message.imageUrl = @"http://pic.fotomore.com/thumb/129392000/isc129392744.jpg";
