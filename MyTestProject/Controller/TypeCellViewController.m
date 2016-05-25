@@ -9,6 +9,7 @@
 #import "TypeCellViewController.h"
 #import "WXBaseTableViewCell.h"
 #import "WXMessage.h"
+#import "SDImageCache.h"
 
 @interface TypeCellViewController () <UITableViewDelegate,UITableViewDataSource>
 
@@ -32,7 +33,26 @@
     [self.myTableView setDelegate:self];
     [self.view addSubview:self.myTableView];
 
+    [self cacheCountSize];
     [self commonData];
+}
+
+- (void)clearCache:(id)sender{
+
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+        [self cacheCountSize];
+
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+
+}
+
+- (void)cacheCountSize{
+    NSUInteger size = [[SDImageCache sharedImageCache] getSize] / 1024;
+    NSUInteger count = [[SDImageCache sharedImageCache] getDiskCount];
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:[NSString stringWithFormat:@"清除缓存%ldkb/%ld",size,count] style:UIBarButtonItemStyleDone target:self action:@selector(clearCache:)];
 }
 
 - (void)commonData{

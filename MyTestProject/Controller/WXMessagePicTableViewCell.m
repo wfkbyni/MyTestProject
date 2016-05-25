@@ -43,7 +43,7 @@
 }
 
 -(void)setMessage:(WXMessage *)message{
-    NSLog(@"%@",@"----------------------->>>>>> 1");
+    NSLog(@"%@",@"----------------------->>>>>> 3");
     self.title.text = message.msgTitle;
 
     self.time.text = [NSDate stringWithIntervalSince1970:message.submitTime];;
