@@ -74,27 +74,11 @@
     self.content.text = message.msgContentShort;
 
     NSString *url = message.imageUrl;
-    [self.activityImageView sd_setImageWithURL:[NSURL URLWithString:url]];
 
-    CGFloat width = self.activityImageView.image.size.width;
-
-    if (width > 0) {
-        self.activityImageView.sd_layout
-        .autoHeightRatio(self.activityImageView.image.size.height / width)
-        .widthIs(width);
-    }else{
-        //未缓存,根据图片url获取图片尺寸
-        CGSize size = [UIImage getImageSizeWithURL:[NSURL URLWithString:message.imageUrl]];
-        CGFloat scale = size.height / size.width;
-        self.activityImageView.sd_layout
-        .autoHeightRatio(scale)
-        .widthIs(size.width);
-    }
+    [self buildImageViewWtihUrl:url];
 
     [self.activityDetail addTarget:self action:@selector(activityDetailAction:) forControlEvents:UIControlEventTouchUpInside];
 }
-
-
 
 -(void) buildImageViewWtihUrl:(NSString *)url{
 

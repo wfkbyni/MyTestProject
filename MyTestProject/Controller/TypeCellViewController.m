@@ -98,6 +98,8 @@
                 break;
         }
 
+        message.activityUrl = message.imageUrl;
+
         [_messageArray addObject:message];
     }
 
