@@ -167,9 +167,18 @@
 - (void)reloadLoadWithIndexPath:(NSIndexPath *)indexPath withSize:(CGSize)size{
     WXMessage *message = self.messageArray[indexPath.row];
     message.size = size;
-    
-    NSLog(@"%ld  ---   row:%ld",indexPath.section,indexPath.row);
+
     [self.myTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+
+    [self performSelector:@selector(execReloadData) withObject:nil afterDelay:1];
+
+}
+
+- (void)execReloadData{
+
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(execReloadData) object:nil];
+
+    [self.myTableView reloadData];
 }
 
 @end

@@ -94,6 +94,54 @@
     [self.activityDetail addTarget:self action:@selector(activityDetailAction:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+
+
+-(void) buildImageViewWtihUrl:(NSString *)url{
+
+    NSURL *urlString = [NSURL URLWithString:url];
+    __weak WXActivityLinkTableViewCell *sself = self;
+    if (![[SDWebImageManager sharedManager] cachedImageExistsForURL:urlString]) {
+
+        [sself.activityImageView sd_setImageWithURL:urlString completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+
+            CGSize newSize = image.size;
+
+            if (newSize.height > 0 && !error) {
+                if ([sself.theDelegate respondsToSelector:@selector(reloadLoadWithIndexPath:withSize:)]) {
+                    [sself.theDelegate reloadLoadWithIndexPath:sself.indexPath withSize:newSize];
+                }
+            }else if(sself.activityImageView.frame.size.height > 0) {
+                if ([sself.theDelegate respondsToSelector:@selector(reloadLoadWithIndexPath:withSize:)]) {
+                    [sself.theDelegate reloadLoadWithIndexPath:sself.indexPath withSize:CGSizeZero];
+                }
+            }
+        }];
+    }else{
+        UIImage *image = [[SDWebImageManager sharedManager].imageCache imageFromDiskCacheForKey:[urlString absoluteString]];
+
+        CGSize size = image.size;
+        CGFloat scale = size.height / size.width;
+        self.activityImageView.sd_layout
+        .autoHeightRatio(scale);
+
+        sself.activityImageView.image = image;
+
+        [self setViewWidthWithWidth:size.width];
+
+        if ([sself.theDelegate respondsToSelector:@selector(reloadLoadWithIndexPath:withSize:)]) {
+            //[sself.theDelegate reloadLoadWithIndexPath:sself.indexPath withSize:CGSizeZero];
+        }
+    }
+}
+
+- (void)setViewWidthWithWidth:(CGFloat)width{
+    if (width > [UIScreen mainScreen].bounds.size.width - 40) {
+        self.activityImageView.sd_layout.widthIs([UIScreen mainScreen].bounds.size.width - 40);
+    }else{
+        self.activityImageView.sd_layout.widthIs(width);
+    }
+}
+
 - (void)activityDetailAction:(id)sender{
 }
 
