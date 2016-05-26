@@ -20,7 +20,7 @@
 }
 
 - (void)setup{
-
+    [self.activityDetail setBackgroundColor:[UIColor orangeColor]];
     self.activityImageView.sd_layout
     .topSpaceToView(self.time, 10)
     .centerXEqualToView(self.bgView);
@@ -106,11 +106,11 @@
 
         CGSize size = image.size;
         CGFloat scale = size.height / size.width;
-        self.activityImageView.sd_layout
+        sself.activityImageView.sd_layout
         .autoHeightRatio(scale);
         sself.activityImageView.image = image;
 
-        [self setViewWidthWithWidth:size.width];
+        [sself setViewWidthWithWidth:size.width];
 
         if ([sself.theDelegate respondsToSelector:@selector(reloadLoadWithIndexPath:withSize:)]) {
             //[sself.theDelegate reloadLoadWithIndexPath:sself.indexPath withSize:CGSizeZero];

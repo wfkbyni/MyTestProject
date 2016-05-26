@@ -72,7 +72,7 @@
                 message.imageUrl = @"http://cdn.cocimg.com/bbs/attachment/Fid_18/18_298683_9dbfa2ec2abd43d.png";
                 break;
             case 1:
-                message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKDTj_ascxCsAhj6ATIID0eX9L4BOCE";
+                message.imageUrl = @"http://cc.cocimg.com/api/uploads/20160525/1464156676548433.jpg";
                 break;
             case 2:
                 message.imageUrl = @"http://static.googleadsserving.cn/pagead/imgad?id=CICAgKCzpIG-aBCsAhjYBDIIQ1_nz0UeZoI";
