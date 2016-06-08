@@ -8,5 +8,6 @@ pod 'ReactiveCocoa'
 pod 'Toast'
 pod 'SDAutoLayout'
 pod 'SDWebImage'
+pod 'SSKeychain'
 end
 

@@ -12,6 +12,7 @@
 #import "AlertController.h"
 #import "RegularController.h"
 #import "AutoLayoutController.h"
+#import "IdfaKeyChainViewController.h"
 
 @interface ViewController ()
 
@@ -57,5 +58,9 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (IBAction)keyChainAction:(id)sender {
+    IdfaKeyChainViewController *controller = [[IdfaKeyChainViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end

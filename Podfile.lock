@@ -10,18 +10,21 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - SSKeychain (1.4.0)
   - Toast (3.0)
 
 DEPENDENCIES:
   - ReactiveCocoa
   - SDAutoLayout
   - SDWebImage
+  - SSKeychain
   - Toast
 
 SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   Toast: 32c59229abfcf41850162b83bb9259dc84372473
 
 COCOAPODS: 0.39.0

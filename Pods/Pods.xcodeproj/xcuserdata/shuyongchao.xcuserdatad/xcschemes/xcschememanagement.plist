@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SSKeychain.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Toast.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0EBB64258952FF6F559C695A5D68E103</key>
+		<key>3AEB032A04DA334DF6978C89ACC06A49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E060C6A3015D573D6FECCD19C4ABB65</key>
+		<key>53117BCC7DB727E05F1EBE6D44FC6EFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>510F4DFDCA6D850262EDE9E2FE4EEA16</key>
+		<key>5E4B9F5038168EDF8698E455F367395F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E8E09F06C23D47CFA097D143EB9CE84</key>
+		<key>8134956869D715FEEF294390C3A80641</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68F7E94D0BD9D8820BF12FAD0F0B0535</key>
+		<key>C04882C3899A23D2F6E6F9D7E46CDA00</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C0D098A2EDF3C59B7829940E753E730E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

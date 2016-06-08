@@ -22,6 +22,8 @@
 		FA35339D1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35339C1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m */; };
 		FA5A0C7F1CCDC08000FCDAA3 /* AnimatioController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A0C7E1CCDC08000FCDAA3 /* AnimatioController.m */; };
 		FA5A0C831CCDE92D00FCDAA3 /* WXAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5A0C821CCDE92D00FCDAA3 /* WXAnimationView.m */; };
+		FA8A02571D08081900FD923E /* IdfaKeyChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA8A02561D08081900FD923E /* IdfaKeyChainViewController.m */; };
+		FA8A02591D08082500FD923E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA8A02581D08082500FD923E /* AdSupport.framework */; };
 		FAE9554B1CE337D00073F93C /* WXAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9554A1CE337D00073F93C /* WXAlertController.m */; };
 		FAE9554F1CE337F10073F93C /* AlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE9554D1CE337F10073F93C /* AlertController.m */; };
 		FAE955561CE5AFE10073F93C /* RegularController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE955551CE5AFE10073F93C /* RegularController.m */; };
@@ -74,6 +76,9 @@
 		FA5A0C7E1CCDC08000FCDAA3 /* AnimatioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimatioController.m; sourceTree = "<group>"; };
 		FA5A0C811CCDE92D00FCDAA3 /* WXAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAnimationView.h; sourceTree = "<group>"; };
 		FA5A0C821CCDE92D00FCDAA3 /* WXAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAnimationView.m; sourceTree = "<group>"; };
+		FA8A02551D08081900FD923E /* IdfaKeyChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdfaKeyChainViewController.h; sourceTree = "<group>"; };
+		FA8A02561D08081900FD923E /* IdfaKeyChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdfaKeyChainViewController.m; sourceTree = "<group>"; };
+		FA8A02581D08082500FD923E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FAE955491CE337D00073F93C /* WXAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXAlertController.h; sourceTree = "<group>"; };
 		FAE9554A1CE337D00073F93C /* WXAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXAlertController.m; sourceTree = "<group>"; };
 		FAE9554C1CE337F10073F93C /* AlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertController.h; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA8A02591D08082500FD923E /* AdSupport.framework in Frameworks */,
 				452ADF8003E4BA2977946B14 /* libPods-MyTestProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +123,7 @@
 		B8073C23745215340815AE61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A02581D08082500FD923E /* AdSupport.framework */,
 				6224150600261F6E2355D0F6 /* libPods-MyTestProject.a */,
 			);
 			name = Frameworks;
@@ -230,6 +237,15 @@
 			path = WXAnimationView;
 			sourceTree = "<group>";
 		};
+		FA8A02541D0807DB00FD923E /* IDFA+KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				FA8A02551D08081900FD923E /* IdfaKeyChainViewController.h */,
+				FA8A02561D08081900FD923E /* IdfaKeyChainViewController.m */,
+			);
+			name = "IDFA+KeyChain";
+			sourceTree = "<group>";
+		};
 		FAE955481CE337D00073F93C /* WXAlertController */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +304,7 @@
 		FAF70EBD1CBF7A7F0079B29F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA8A02541D0807DB00FD923E /* IDFA+KeyChain */,
 				FA35337D1CEBFC79001B9E01 /* AutoLayoutController */,
 				FA06A6B91CF5B7EA009FDBEA /* StarsController */,
 				FA06A6BA1CF5B7F5009FDBEA /* AnimatioController */,
@@ -467,6 +484,7 @@
 				FAF70E9D1CBF794D0079B29F /* ViewController.m in Sources */,
 				FA35338A1CEC4FDE001B9E01 /* TypeCellViewController.m in Sources */,
 				FAF70E9A1CBF794D0079B29F /* AppDelegate.m in Sources */,
+				FA8A02571D08081900FD923E /* IdfaKeyChainViewController.m in Sources */,
 				FAE955561CE5AFE10073F93C /* RegularController.m in Sources */,
 				FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */,
 				FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */,
