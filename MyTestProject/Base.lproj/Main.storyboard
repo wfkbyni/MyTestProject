@@ -84,13 +84,41 @@
                                     <action selector="keyChainAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsL-yP-NKa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUI-kF-Sdy">
+                                <rect key="frame" x="4" y="331" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Urq-5G-Uh3"/>
+                                    <constraint firstAttribute="width" constant="131" id="agg-le-ejO"/>
+                                    <constraint firstAttribute="height" constant="30" id="ceL-oY-pTc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="sdd-N2-D9J"/>
+                                </constraints>
+                                <state key="normal" title="Masonry基本使用"/>
+                                <connections>
+                                    <action selector="masonryAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jHz-4v-JbR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OR-FG-Jip">
+                                <rect key="frame" x="4" y="369" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="2i1-eC-qcy"/>
+                                    <constraint firstAttribute="width" constant="131" id="NUs-t5-MFa"/>
+                                    <constraint firstAttribute="height" constant="30" id="T4v-RT-3st"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="jWu-jN-ISI"/>
+                                </constraints>
+                                <state key="normal" title="AVAudioPlayer使用"/>
+                                <connections>
+                                    <action selector="playerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSp-4p-6S0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="1WF-kB-scL" secondAttribute="leading" id="3Ek-T1-c2j"/>
                             <constraint firstItem="1WF-kB-scL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="9Da-Uf-6Cr"/>
+                            <constraint firstItem="MUI-kF-Sdy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="267" id="GkQ-xS-aSW"/>
                             <constraint firstItem="HQE-2A-7IZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="HLM-yE-U2Q"/>
                             <constraint firstItem="mCJ-am-0SI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="101" id="K66-qs-avS"/>
+                            <constraint firstItem="3OR-FG-Jip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="K8k-HD-IUB"/>
                             <constraint firstItem="90a-mc-CFU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ORe-FT-paY"/>
                             <constraint firstItem="BtP-At-Aew" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="229" id="OS0-dM-YWk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="90a-mc-CFU" secondAttribute="leading" id="VMV-Yr-tOz"/>
@@ -99,7 +127,9 @@
                             <constraint firstItem="FDY-PW-IpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="nov-X8-6ke"/>
                             <constraint firstItem="BtP-At-Aew" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="p8m-S5-LNF"/>
                             <constraint firstItem="FDY-PW-IpJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="191" id="qwL-xt-SDb"/>
+                            <constraint firstItem="MUI-kF-Sdy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rsF-eu-yzf"/>
                             <constraint firstItem="HQE-2A-7IZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="146" id="sIH-Nq-bMP"/>
+                            <constraint firstItem="3OR-FG-Jip" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="305" id="sXC-LX-qKh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hN9-iC-2Dp"/>

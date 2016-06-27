@@ -13,6 +13,8 @@
 #import "RegularController.h"
 #import "AutoLayoutController.h"
 #import "IdfaKeyChainViewController.h"
+#import "MasonryController.h"
+#import "PlayerViewController.h"
 
 @interface ViewController ()
 
@@ -63,4 +65,13 @@
     [self.navigationController pushViewController:controller animated:YES];
 }
 
+- (IBAction)masonryAction:(id)sender {
+    MasonryController *controller = [MasonryController new];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)playerAction:(id)sender {
+    PlayerViewController *controller = [PlayerViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 @end

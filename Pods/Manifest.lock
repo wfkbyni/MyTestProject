@@ -1,4 +1,5 @@
 PODS:
+  - Masonry (1.0.1)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -14,6 +15,7 @@ PODS:
   - Toast (3.0)
 
 DEPENDENCIES:
+  - Masonry
   - ReactiveCocoa
   - SDAutoLayout
   - SDWebImage
@@ -21,6 +23,7 @@ DEPENDENCIES:
   - Toast
 
 SPEC CHECKSUMS:
+  Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDAutoLayout: ea6e2ae9fbb438aa2feb0c4363dba9297e98638a
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
