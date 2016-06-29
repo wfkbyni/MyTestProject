@@ -153,9 +153,11 @@
 }
 
 - (void)playSound{
-    // 这里不知道什么原因，mp3的音效文件，播放不了。
-    NSArray *array = @[@"Audio.wav",@"click.mp3",@"click.wav",@"delete.mp3",@"delete.wav",@"GAudio_Call.wav",@"GAudio_Receive.wav",@"Global.wav",@"meow.mp3",@"msg.wav",@"PaiPaiMsg.wav",@"shake.wav",@"SoundTest.wav",@"system.wav",@"tweet.wav",@"VideoShow_countdown.wav"];
-    NSInteger index = arc4random_uniform(array.count);
+
+    NSArray *array = @[@"Audio.wav",@"click.mp3",@"click.wav",@"delete.mp3",@"delete.wav",@"GAudio_Call.wav",
+                       @"GAudio_Receive.wav",@"Global.wav",@"meow.mp3",@"msg.wav",@"PaiPaiMsg.wav",@"shake.wav",
+                       @"SoundTest.wav",@"system.wav",@"tweet.wav",@"VideoShow_countdown.wav"];
+    NSInteger index = arc4random_uniform((int)array.count);
     NSString *fileName = array[index];
     NSLog(@"%ld %@",index, fileName);
     [AudioTool playSound:fileName];
