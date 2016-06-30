@@ -110,6 +110,19 @@
                                     <action selector="playerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSp-4p-6S0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH3-G3-hwG">
+                                <rect key="frame" x="4" y="407" width="131" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="Sko-fk-IFs"/>
+                                    <constraint firstAttribute="width" constant="131" id="d3x-EV-NPe"/>
+                                    <constraint firstAttribute="height" constant="30" id="dvl-3H-PLN"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="z0G-hH-Mqe"/>
+                                </constraints>
+                                <state key="normal" title="布局测试"/>
+                                <connections>
+                                    <action selector="layoutAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGg-hb-pDX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,8 +135,10 @@
                             <constraint firstItem="90a-mc-CFU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ORe-FT-paY"/>
                             <constraint firstItem="BtP-At-Aew" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="229" id="OS0-dM-YWk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="90a-mc-CFU" secondAttribute="leading" id="VMV-Yr-tOz"/>
+                            <constraint firstItem="gH3-G3-hwG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="343" id="Xbv-Ti-V7j"/>
                             <constraint firstItem="mCJ-am-0SI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="bpg-MM-vTd"/>
                             <constraint firstAttribute="leadingMargin" secondItem="90a-mc-CFU" secondAttribute="leading" id="ihu-ha-FwZ"/>
+                            <constraint firstItem="gH3-G3-hwG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="jp5-xE-bRP"/>
                             <constraint firstItem="FDY-PW-IpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="nov-X8-6ke"/>
                             <constraint firstItem="BtP-At-Aew" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="p8m-S5-LNF"/>
                             <constraint firstItem="FDY-PW-IpJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="191" id="qwL-xt-SDb"/>

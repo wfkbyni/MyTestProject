@@ -15,6 +15,7 @@
 #import "IdfaKeyChainViewController.h"
 #import "MasonryController.h"
 #import "PlayerViewController.h"
+#import "LayoutViewController.h"
 
 @interface ViewController ()
 
@@ -72,6 +73,11 @@
 
 - (IBAction)playerAction:(id)sender {
     PlayerViewController *controller = [PlayerViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)layoutAction:(id)sender {
+    LayoutViewController *controller = [LayoutViewController new];
     [self.navigationController pushViewController:controller animated:YES];
 }
 @end

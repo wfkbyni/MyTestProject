@@ -31,6 +31,8 @@
 		FA01701B1D20FAF400383363 /* system.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA01700B1D20FAF400383363 /* system.wav */; };
 		FA01701C1D20FAF400383363 /* tweet.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA01700C1D20FAF400383363 /* tweet.wav */; };
 		FA01701D1D20FAF400383363 /* VideoShow_Countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA01700D1D20FAF400383363 /* VideoShow_Countdown.wav */; };
+		FA0170251D2393A600383363 /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170241D2393A600383363 /* LayoutViewController.m */; };
+		FA0170291D2394B400383363 /* LayoutHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170281D2394B400383363 /* LayoutHeaderView.m */; };
 		FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */; };
 		FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */; };
 		FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */; };
@@ -96,6 +98,10 @@
 		FA01700B1D20FAF400383363 /* system.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = system.wav; sourceTree = "<group>"; };
 		FA01700C1D20FAF400383363 /* tweet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tweet.wav; sourceTree = "<group>"; };
 		FA01700D1D20FAF400383363 /* VideoShow_Countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = VideoShow_Countdown.wav; sourceTree = "<group>"; };
+		FA0170231D2393A600383363 /* LayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutViewController.h; sourceTree = "<group>"; };
+		FA0170241D2393A600383363 /* LayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutViewController.m; sourceTree = "<group>"; };
+		FA0170271D2394B400383363 /* LayoutHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutHeaderView.h; sourceTree = "<group>"; };
+		FA0170281D2394B400383363 /* LayoutHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutHeaderView.m; sourceTree = "<group>"; };
 		FA06A6B31CF5B4F0009FDBEA /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		FA06A6B61CF5B561009FDBEA /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
@@ -236,6 +242,25 @@
 				FA01700D1D20FAF400383363 /* VideoShow_Countdown.wav */,
 			);
 			path = sound;
+			sourceTree = "<group>";
+		};
+		FA0170221D23939600383363 /* LayoutController */ = {
+			isa = PBXGroup;
+			children = (
+				FA0170261D23949200383363 /* HeaderView */,
+				FA0170231D2393A600383363 /* LayoutViewController.h */,
+				FA0170241D2393A600383363 /* LayoutViewController.m */,
+			);
+			path = LayoutController;
+			sourceTree = "<group>";
+		};
+		FA0170261D23949200383363 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				FA0170271D2394B400383363 /* LayoutHeaderView.h */,
+				FA0170281D2394B400383363 /* LayoutHeaderView.m */,
+			);
+			name = HeaderView;
 			sourceTree = "<group>";
 		};
 		FA06A6B21CF5B4D7009FDBEA /* Other */ = {
@@ -414,6 +439,7 @@
 		FAF70EBD1CBF7A7F0079B29F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA0170221D23939600383363 /* LayoutController */,
 				FA016FDC1D20B51F00383363 /* PlayerController */,
 				FAC06EC21D1293BC00FB1869 /* MasonryController */,
 				FA8A02541D0807DB00FD923E /* IDFA+KeyChain */,
@@ -613,6 +639,7 @@
 				FA016FF61D20C24800383363 /* AudioTool.m in Sources */,
 				FAF70ED21CBF80980079B29F /* WXCustomScroeView.m in Sources */,
 				FA3533931CEC56B3001B9E01 /* WXMessagePicTableViewCell.m in Sources */,
+				FA0170291D2394B400383363 /* LayoutHeaderView.m in Sources */,
 				FAE9554B1CE337D00073F93C /* WXAlertController.m in Sources */,
 				FA35339D1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m in Sources */,
 				FAF70E9D1CBF794D0079B29F /* ViewController.m in Sources */,
@@ -632,6 +659,7 @@
 				FAF70E971CBF794D0079B29F /* main.m in Sources */,
 				FAF70EC01CBF7AA60079B29F /* StarsController.m in Sources */,
 				FA3533961CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m in Sources */,
+				FA0170251D2393A600383363 /* LayoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
