@@ -184,7 +184,7 @@
         make.height.equalTo(@60);
     }];
 }
-// 这是在分支上的东西吧。。。。。。
+
 - (void)btnAction:(UIButton *)sender{
     [_redConstraint deactivate];
     [_greenConstraint deactivate];
@@ -206,6 +206,5 @@
     }
 }
 
-// 这是在分支上的东西吧。。。。。。
 
 @end
