@@ -8,6 +8,7 @@
 
 #import "LayoutViewController.h"
 #import "LayoutHeaderView.h"
+#import "ComplexViewController.h"
 
 @interface LayoutViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -69,11 +70,11 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if (scrollView.contentOffset.y > [LayoutHeaderView heaerViewHeight] - 40) {
         [UIView animateWithDuration:0.05 animations:^{
-            self.navigationController.navigationBar.alpha = 1;
+           // self.navigationController.navigationBar.alpha = 1;
         }];
     }else{
         [UIView animateWithDuration:0.25 animations:^{
-            self.navigationController.navigationBar.alpha = 0;
+           // self.navigationController.navigationBar.alpha = 0;
         }];
     }
 }
@@ -133,6 +134,14 @@
     }];
 
     return sectionView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    ComplexViewController *controller = [ComplexViewController new];
+    [self.navigationController pushViewController:controller animated:YES];
+
 }
 
 @end

@@ -33,6 +33,8 @@
 		FA01701D1D20FAF400383363 /* VideoShow_Countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = FA01700D1D20FAF400383363 /* VideoShow_Countdown.wav */; };
 		FA0170251D2393A600383363 /* LayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170241D2393A600383363 /* LayoutViewController.m */; };
 		FA0170291D2394B400383363 /* LayoutHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170281D2394B400383363 /* LayoutHeaderView.m */; };
+		FA01702D1D25FCF700383363 /* LayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01702C1D25FCF700383363 /* LayoutCell.m */; };
+		FA0170391D29F05B00383363 /* ComplexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170381D29F05B00383363 /* ComplexViewController.m */; };
 		FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */; };
 		FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */; };
 		FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */; };
@@ -102,6 +104,10 @@
 		FA0170241D2393A600383363 /* LayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutViewController.m; sourceTree = "<group>"; };
 		FA0170271D2394B400383363 /* LayoutHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutHeaderView.h; sourceTree = "<group>"; };
 		FA0170281D2394B400383363 /* LayoutHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutHeaderView.m; sourceTree = "<group>"; };
+		FA01702B1D25FCF700383363 /* LayoutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutCell.h; sourceTree = "<group>"; };
+		FA01702C1D25FCF700383363 /* LayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutCell.m; sourceTree = "<group>"; };
+		FA0170371D29F05B00383363 /* ComplexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexViewController.h; sourceTree = "<group>"; };
+		FA0170381D29F05B00383363 /* ComplexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexViewController.m; sourceTree = "<group>"; };
 		FA06A6B31CF5B4F0009FDBEA /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		FA06A6B61CF5B561009FDBEA /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
@@ -247,9 +253,12 @@
 		FA0170221D23939600383363 /* LayoutController */ = {
 			isa = PBXGroup;
 			children = (
+				FA01702A1D25FCDF00383363 /* cell */,
 				FA0170261D23949200383363 /* HeaderView */,
 				FA0170231D2393A600383363 /* LayoutViewController.h */,
 				FA0170241D2393A600383363 /* LayoutViewController.m */,
+				FA0170371D29F05B00383363 /* ComplexViewController.h */,
+				FA0170381D29F05B00383363 /* ComplexViewController.m */,
 			);
 			path = LayoutController;
 			sourceTree = "<group>";
@@ -261,6 +270,15 @@
 				FA0170281D2394B400383363 /* LayoutHeaderView.m */,
 			);
 			name = HeaderView;
+			sourceTree = "<group>";
+		};
+		FA01702A1D25FCDF00383363 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA01702B1D25FCF700383363 /* LayoutCell.h */,
+				FA01702C1D25FCF700383363 /* LayoutCell.m */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 		FA06A6B21CF5B4D7009FDBEA /* Other */ = {
@@ -639,6 +657,7 @@
 				FA016FF61D20C24800383363 /* AudioTool.m in Sources */,
 				FAF70ED21CBF80980079B29F /* WXCustomScroeView.m in Sources */,
 				FA3533931CEC56B3001B9E01 /* WXMessagePicTableViewCell.m in Sources */,
+				FA0170391D29F05B00383363 /* ComplexViewController.m in Sources */,
 				FA0170291D2394B400383363 /* LayoutHeaderView.m in Sources */,
 				FAE9554B1CE337D00073F93C /* WXAlertController.m in Sources */,
 				FA35339D1CED8782001B9E01 /* WXPlaintextLinkTableViewCell.m in Sources */,
@@ -657,6 +676,7 @@
 				FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */,
 				FAE9554F1CE337F10073F93C /* AlertController.m in Sources */,
 				FAF70E971CBF794D0079B29F /* main.m in Sources */,
+				FA01702D1D25FCF700383363 /* LayoutCell.m in Sources */,
 				FAF70EC01CBF7AA60079B29F /* StarsController.m in Sources */,
 				FA3533961CEC57C3001B9E01 /* WXActivityLinkTableViewCell.m in Sources */,
 				FA0170251D2393A600383363 /* LayoutViewController.m in Sources */,
