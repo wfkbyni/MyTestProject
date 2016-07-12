@@ -10,5 +10,6 @@ pod 'SDAutoLayout'
 pod 'SDWebImage'
 pod 'SSKeychain'
 pod 'Masonry'
+pod 'PNChart'
 end
 

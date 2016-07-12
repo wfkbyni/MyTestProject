@@ -35,6 +35,7 @@
 		FA0170291D2394B400383363 /* LayoutHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170281D2394B400383363 /* LayoutHeaderView.m */; };
 		FA01702D1D25FCF700383363 /* LayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01702C1D25FCF700383363 /* LayoutCell.m */; };
 		FA0170391D29F05B00383363 /* ComplexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0170381D29F05B00383363 /* ComplexViewController.m */; };
+		FA0170501D2E41B600383363 /* ChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA01704F1D2E41B600383363 /* ChartViewController.m */; };
 		FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */; };
 		FA06A6B81CF5B561009FDBEA /* UIImage+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA06A6B71CF5B561009FDBEA /* UIImage+Helper.m */; };
 		FA3533801CEBFC93001B9E01 /* AutoLayoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA35337F1CEBFC93001B9E01 /* AutoLayoutController.m */; };
@@ -108,6 +109,8 @@
 		FA01702C1D25FCF700383363 /* LayoutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutCell.m; sourceTree = "<group>"; };
 		FA0170371D29F05B00383363 /* ComplexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexViewController.h; sourceTree = "<group>"; };
 		FA0170381D29F05B00383363 /* ComplexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexViewController.m; sourceTree = "<group>"; };
+		FA01704E1D2E41B600383363 /* ChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartViewController.h; sourceTree = "<group>"; };
+		FA01704F1D2E41B600383363 /* ChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartViewController.m; sourceTree = "<group>"; };
 		FA06A6B31CF5B4F0009FDBEA /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		FA06A6B41CF5B4F0009FDBEA /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
 		FA06A6B61CF5B561009FDBEA /* UIImage+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Helper.h"; sourceTree = "<group>"; };
@@ -259,6 +262,8 @@
 				FA0170241D2393A600383363 /* LayoutViewController.m */,
 				FA0170371D29F05B00383363 /* ComplexViewController.h */,
 				FA0170381D29F05B00383363 /* ComplexViewController.m */,
+				FA01704E1D2E41B600383363 /* ChartViewController.h */,
+				FA01704F1D2E41B600383363 /* ChartViewController.m */,
 			);
 			path = LayoutController;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 				FA3533841CEBFD7A001B9E01 /* AutoHeightViewController.m in Sources */,
 				FA016FDF1D20B54600383363 /* PlayerViewController.m in Sources */,
 				FA06A6B51CF5B4F0009FDBEA /* NSDate+Helper.m in Sources */,
+				FA0170501D2E41B600383363 /* ChartViewController.m in Sources */,
 				FA35338D1CEC5249001B9E01 /* WXBaseTableViewCell.m in Sources */,
 				FA3533871CEC35F4001B9E01 /* GridViewController.m in Sources */,
 				FA5A0C7F1CCDC08000FCDAA3 /* AnimatioController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "LayoutViewController.h"
 #import "LayoutHeaderView.h"
 #import "ComplexViewController.h"
+#import "ChartViewController.h"
 
 @interface LayoutViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -139,7 +140,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    ComplexViewController *controller = [ComplexViewController new];
+    UIViewController *controller;
+    switch (indexPath.row) {
+        case 0:
+            controller = [ChartViewController new];
+            break;
+
+        default:
+        {
+            controller = [ComplexViewController new];
+
+        }
+            break;
+    }
+
     [self.navigationController pushViewController:controller animated:YES];
 
 }
